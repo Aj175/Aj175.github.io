@@ -689,65 +689,91 @@ font-weight: var(--font-medium);
 }
 
 /*==================== PORTFOLIO ====================*/
-.portfolio_container{
-  overflow: initial;
+.portfolio{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.container{
+  position: relative;
+  width: 1600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+.container .card{
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+  background: var(--first-color-lighter);
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+.container .card:hover{
+  height: 420px;
 }
 
-.portfolio_content{
-  padding: 0 1.5rem;
+.container .card .imgBx{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  border-radius: 15px;
+ 
 }
-
-.portfolio_img{
-  width: 265px;
-  border-radius: .5rem;
-  justify-self: center;
+.container .card .imgBx img{
+  max-width: 100%;
+  border-radius: 4px;
 }
-
-.portfolio_title{
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-0-5);
-}
-
-.portfolio_description{
-  margin-bottom: var(--mb-0-75);
+.container .card .content{
+  position: relative;
+  margin-top: 140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
 }
 
 .portfolio_button:hover .button_icon{
   transform: translateX(.25rem);
 }
-
-.swiper-button-prev::after,
-.swiper-button-next::after{
-  content: '';
+.container .card:hover .content{
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
 }
-
-.swiper-portfolio-icon{
-  font-size: 2rem;
-  color: var(--first-color);
+.container .content p{
+  font-size: 10px;
 }
-
-.swiper-button-prev{
-  left: -.5rem;
+@media (max-width: 700px){
+.container{
+  flex-direction: column;  
+  width: 100px;
+  left: 20px;
+  right: 20px;
+  justify-content: center;
+  align-items: center; 
+  }
+  .container .imgBx img{
+     left: -25px;
+     margin-right: 30px;
+     margin-left: -20px;
+     justify-content: center;
+     align-items: center;
+  }
 }
-
-.swiper-button-next{
-  right: -.5rem;
-}
-
-.swiper-container-horizontal > .swiper-pagination-bullets{
-  bottom: -2.5rem;
-}
-
-.swiper-pagination-bullet-active{
-  background-color: var(--first-color);
-}
-
-.swiper-button-prev,
-.swiper-button-next,
-.swiper-pagination-bullet{
-   outline: none;
-}
-
 
 
 /*==================== PROJECT IN MIND ====================*/
