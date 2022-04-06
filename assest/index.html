@@ -542,32 +542,28 @@
                     </div>
                  </div>
              </div>
-             <form action="" class="contact_form grid">
-                 <div class="contact_inputs grid">
-                     <div class="contact_content">
-                         <label for="" class="contact_label">NAME</label>
-                         <input type="text" class="contact_input">
-                     </div>
-                     <div class="contact_content">
-                        <label for="" class="contact_label">Email</label>
-                        <input type="email" class="contact_input">
+             <form id="fs-frm" name="simple-contact-form" action="https://formspree.io/f/mdoblrad" method="post" class="contact_form grid">
+                <div class="contact_inputs grid">
+                <fieldset id="fs-frm-inputs">
+                    <div class="contact_content">
+                    <label for="full-name" class="contact_label">Full Name</label>
+                    <input type="text" name="name" id="full-name" placeholder="First and Last" required="" class="contact_input">
                     </div>
-                 </div>
-                 <div class="contact_content">
-                    <label for="" class="contact_label">Project</label>
-                    <input type="text" class="contact_input">
-                </div>
-                <div class="contact_content">
-                    <label for="" class="contact_label">Messsage</label>
-                    <textarea name="" id="" cols="0" rows="7" class="contact_input"></textarea>
+                    <div class="contact_content">
+                    <label for="email-address" class="contact_label">Email Address</label>
+                    <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="" class="contact_input">
+                    </div>
+                    <div class="contact_content">
+                    <label for="message" class="contact_label">Message</label>
+                    <textarea rows="5" name="message" id="message" placeholder="write message" required="" class="contact_input"></textarea>
+                    <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+                    </div>
+                  </fieldset>
                 </div>
                 <div>
-                    <a href="#" class="button button--flex">
-                        Send Messsage
-                        <i class="uil uil-message button_icon"></i>
-                    </a>
+                <input type="submit" value="Submit">
                 </div>
-             </form>
+              </form>
            </div>
         </section>
     </main>
