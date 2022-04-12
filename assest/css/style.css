@@ -865,14 +865,13 @@ font-weight: var(--font-medium);
 .fs-frm label,
 .fs-frm .card-element:disabled {
   font-family: inherit;
-  font-size: 100%;
-  color: inherit;
-  border: none;
-  border-radius: 25px;
-  display: grid;
-  width: 100%;
-  padding: 0;
-  margin: 0;
+  font-size: 16px;
+  border: 0;
+  border-radius: 15px;
+  padding: 20px;
+  outline: none;
+  background: var(--first-color-lighter)
+  margin: 10px 0;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -891,10 +890,11 @@ font-weight: var(--font-medium);
 .fs-frm select,
 .fs-frm textarea,
 .fs-frm #card-element {
-  border: 1px solid rgba(0,0,0,0.2);
-  background-color: rgba(255,255,255,0.9);
-  padding: .75em 1rem;
-  margin-bottom: 1.5rem;
+  border: 0;
+  background-color: var(--first-color-lighter);
+  padding: 20px;
+  margin-bottom: 10px 0;
+   border-radius: 30px;
 }
 .fs-frm input:focus,
 .fs-frm select:focus,
@@ -912,8 +912,9 @@ font-weight: var(--font-medium);
 .fs-frm [type="button"],
 .fs-frm [type="submit"],
 .fs-frm [type="reset"] {
-  width: auto;
+  width: 150px;
   cursor: pointer;
+  margin: 20px auto 0;
   -webkit-appearance: button;
   -moz-appearance: button;
   appearance: button;
